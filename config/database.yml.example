@@ -1,0 +1,14 @@
+common: &common
+  adapter:      postgresql
+  pool:         5
+  timeout:      5000
+  min_messages: warning
+
+development:
+  <<: *common
+  database: moodboard_development
+
+test:
+  <<: *common
+  database: moodboard_test
+
