@@ -4,9 +4,7 @@
         <div class="caption">
           <h3><%= pin.description%></h3>
           <p><%= pin.user.email %></p>
-          
           <%= image_tag pin.image.url(:medium) %>
-         
           <% if pin.user == current_user %>
             <p>
               <%= link_to "Show", pin_path(pin), class: "btn btn-default" %>

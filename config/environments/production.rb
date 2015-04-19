@@ -79,4 +79,13 @@ Moodboard::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.default_url_options = { :host => 'https://shim-moodboard.herokuapp.com/' }
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['shim-moodboard'],
+    :access_key_id => ENV['AKIAIXBTZBHCJACXVPRA'],
+    :secret_access_key => ENV['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']
+  }
+}
+
 end
